@@ -1,10 +1,10 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types";
 
 const MoviesList = (props) => {
   // eslint-disable-next-line react/prop-types
-  const {moviesList} = props;
+  const {moviesList, movieCardTitleHandler} = props;
   return (
     <div className="catalog__movies-list">
       {moviesList
@@ -16,7 +16,13 @@ const MoviesList = (props) => {
                 <img src="img/macbeth.jpg" alt={movieCard} width="280" height="175" />
               </div>
               <h3 className="small-movie-card__title">
-                <a className="small-movie-card__link" href="movie-page.html">{movieCard}</a>
+                <a
+                  className="small-movie-card__link"
+                  href="movie-page.html"
+                  onClick={movieCardTitleHandler}
+                >
+                  {movieCard}
+                </a>
               </h3>
             </article>
           );
@@ -26,7 +32,8 @@ const MoviesList = (props) => {
 };
 
 MoviesList.propTypes = {
-  movieList: moviesListPropTypes,
+  moviesList: moviesListPropTypes,
+  movieCardTitleHandler: PropTypes.func,
 };
 
 export default MoviesList;
