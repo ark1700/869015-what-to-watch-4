@@ -1,8 +1,4 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import MovieList from "./movie-list.jsx";
-
-const moviesList = [
+const films = [
   {
     name: `Bohemian Rhapsody`,
     previewImage: `img/bohemian-rhapsody.jpg`,
@@ -37,12 +33,4 @@ const moviesList = [
   }
 ];
 
-it(`Render Main`, () => {
-  const tree = renderer
-    .create(<MovieList
-      moviesList={moviesList}
-    />)
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
+export default films;
