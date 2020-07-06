@@ -102,7 +102,10 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <MoviesList moviesList={moviesList} movieCardTitleHandler={() => {}}/>
+          <MoviesList
+            moviesList={moviesList}
+            setActiveCard={() => {}}
+          />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
