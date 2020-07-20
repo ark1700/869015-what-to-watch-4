@@ -20,7 +20,7 @@ exports[`Render Main 1`] = `
   >
     <a
       className="small-movie-card__link"
-      href="movie-page.html"
+      href="./movie-page"
     >
       Bohemian Rhapsody
     </a>

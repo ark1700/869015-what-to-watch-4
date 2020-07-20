@@ -23,7 +23,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         Bohemian Rhapsody
       </a>
@@ -48,7 +48,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         Macbeth
       </a>
@@ -73,7 +73,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         Aviator
       </a>
@@ -98,7 +98,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         We need to talk about Kevin
       </a>
@@ -123,7 +123,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         Pulp Fiction
       </a>
@@ -148,7 +148,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         No Country for Old Men
       </a>
@@ -173,7 +173,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         Snatch
       </a>
@@ -198,7 +198,7 @@ exports[`Render Main 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="./movie-page"
       >
         War of the Worlds
       </a>

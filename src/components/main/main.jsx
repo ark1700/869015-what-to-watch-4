@@ -1,12 +1,12 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types.js";
 import MoviesList from "../movie-list/movie-list.jsx";
 
 const Main = (props) => {
   // eslint-disable-next-line react/prop-types
   const {title, poster, genre, year} = props.movieCardHead;
-  const {moviesList} = props;
+  const {moviesList, setActiveCard} = props;
 
   return (
     <div>
@@ -104,7 +104,7 @@ const Main = (props) => {
 
           <MoviesList
             moviesList={moviesList}
-            setActiveCard={() => {}}
+            setActiveCard={setActiveCard}
           />
 
           <div className="catalog__more">
@@ -132,6 +132,7 @@ const Main = (props) => {
 
 Main.propTypes = {
   moviesList: moviesListPropTypes,
+  setActiveCard: PropTypes.func,
 };
 
 export default Main;
