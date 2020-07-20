@@ -24,7 +24,7 @@ class MovieCard extends PureComponent {
         <h3 className="small-movie-card__title">
           <a
             className="small-movie-card__link"
-            href="movie-page.html"
+            href="./movie-page"
           >
             {name}
           </a>
@@ -34,6 +34,7 @@ class MovieCard extends PureComponent {
   }
 
   handleMovieCardMouseOver() {
+    // console.log(this.props.setActiveCard);
     this.props.setActiveCard(this.props.movieCard);
   }
 }
