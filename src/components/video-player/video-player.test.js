@@ -1,8 +1,8 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import MovieCard from "./movie-card.jsx";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import VideoPlayer from "./video-player";
 
-const movieCard = {
+const film = {
   id: 1,
   name: `The Grand Budapest Hotel`,
   posterImage: `img/the-grand-budapest-hotel-poster.jpg`,
@@ -22,16 +22,17 @@ const movieCard = {
   isFavorite: false
 };
 
-it(`Render Main`, () => {
-  const tree = renderer
-    .create(<MovieCard
-      movieCard={movieCard}
-    />, {
-      createNodeMock: () => {
-        return {};
-      }
-    })
-    .toJSON();
+it(`VideoPlayer component should render correct`, () => {
+  const tree = renderer.create(<VideoPlayer
+    src={film.previewSrc}
+    isPlaying={false}
+    previewImage={film.previewImage}
+    muted={true}
+  />, {
+    createNodeMock: () => {
+      return {};
+    }
+  }).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

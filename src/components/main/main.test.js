@@ -4,36 +4,42 @@ import Main from "./main.jsx";
 
 const moviesList = [
   {
-    name: `Bohemian Rhapsody`,
-    previewImage: `img/bohemian-rhapsody.jpg`,
+    id: 1,
+    name: `The Grand Budapest Hotel`,
+    posterImage: `img/the-grand-budapest-hotel-poster.jpg`,
+    previewImage: `img/the-grand-budapest-hotel-poster.jpg`,
+    backgroundImage: `img/bg-the-grand-budapest-hotel.jpg`,
+    backgroundColor: `#ffffff`,
+    videoLink: `https://some-link`,
+    previewVideoLink: `https://some-link`,
+    description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
+    rating: 10,
+    scoresCount: 240,
+    director: `Wes Andreson`,
+    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`],
+    runTime: 99,
+    genre: `Comedy`,
+    released: 2014,
+    isFavorite: false
   },
   {
-    name: `Macbeth`,
-    previewImage: `img/macbeth.jpg`,
-  },
-  {
-    name: `Aviator`,
-    previewImage: `img/aviator.jpg`,
-  },
-  {
-    name: `We need to talk about Kevin`,
-    previewImage: `img/we-need-to-talk-about-kevin.jpg`,
-  },
-  {
-    name: `Pulp Fiction`,
-    previewImage: `img/pulp-fiction.jpg`,
-  },
-  {
-    name: `No Country for Old Men`,
-    previewImage: `img/no-country-for-old-men.jpg`,
-  },
-  {
-    name: `Snatch`,
-    previewImage: `img/snatch.jpg`,
-  },
-  {
-    name: `War of the Worlds`,
-    previewImage: `img/war-of-the-worlds.jpg`,
+    id: 1,
+    name: `The Grand Budapest Hotel`,
+    posterImage: `img/the-grand-budapest-hotel-poster.jpg`,
+    previewImage: `img/the-grand-budapest-hotel-poster.jpg`,
+    backgroundImage: `img/bg-the-grand-budapest-hotel.jpg`,
+    backgroundColor: `#ffffff`,
+    videoLink: `https://some-link`,
+    previewVideoLink: `https://some-link`,
+    description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
+    rating: 10,
+    scoresCount: 240,
+    director: `Wes Andreson`,
+    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`],
+    runTime: 99,
+    genre: `Comedy`,
+    released: 2014,
+    isFavorite: false
   }
 ];
 const movieCardHead = {
@@ -48,7 +54,11 @@ it(`Render Main`, () => {
     .create(<Main
       movieCardHead={movieCardHead}
       moviesList={moviesList}
-    />)
+    />, {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();
