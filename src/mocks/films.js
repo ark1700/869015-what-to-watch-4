@@ -7,7 +7,7 @@ const films = [
     backgroundImage: `img/bg-the-grand-budapest-hotel.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 10,
     scoresCount: 240,
@@ -16,7 +16,7 @@ const films = [
     runTime: 99,
     genre: `Comedy`,
     released: 2014,
-    isFavorite: false
+    isFavorite: false,
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const films = [
     backgroundImage: `img/macbeth.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     description: `In the 1930s, the Macbeth is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 9,
     scoresCount: 140,
@@ -45,7 +45,7 @@ const films = [
     backgroundImage: `img/aviator.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the aviator is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 9,
     scoresCount: 140,
@@ -54,7 +54,7 @@ const films = [
     runTime: 99,
     genre: `Drama`,
     released: 2011,
-    isFavorite: false
+    isFavorite: false,
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const films = [
     backgroundImage: `img/bg-the-grand-budapest-hotel.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     description: `In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 10,
     scoresCount: 240,
@@ -73,7 +73,7 @@ const films = [
     runTime: 99,
     genre: `Comedy`,
     released: 2014,
-    isFavorite: false
+    isFavorite: false,
   },
   {
     id: 5,
@@ -83,7 +83,7 @@ const films = [
     backgroundImage: `img/macbeth.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     description: `In the 1930s, the Macbeth is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 9,
     scoresCount: 140,
@@ -102,7 +102,7 @@ const films = [
     backgroundImage: `img/aviator.jpg`,
     backgroundColor: `#ffffff`,
     videoLink: `https://some-link`,
-    previewVideoLink: `https://some-link`,
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     description: `In the 1930s, the aviator is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.`,
     rating: 9,
     scoresCount: 140,
@@ -111,7 +111,7 @@ const films = [
     runTime: 99,
     genre: `Drama`,
     released: 2011,
-    isFavorite: false
+    isFavorite: false,
   },
 ];
 
