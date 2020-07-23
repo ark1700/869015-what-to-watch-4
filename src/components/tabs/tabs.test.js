@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCard from "./movie-card.jsx";
+import Tabs from "./tabs.jsx";
 
-const movieCard = {
+const moviePage = {
   id: 1,
   name: `The Grand Budapest Hotel`,
   posterImage: `img/the-grand-budapest-hotel-poster.jpg`,
@@ -22,15 +22,35 @@ const movieCard = {
   isFavorite: false
 };
 
-it(`Render Movie card`, () => {
+const reviews = [
+  {
+    id: 1,
+    user: {
+      id: 4,
+      name: `Kate Muir`
+    },
+    rating: 8.9,
+    comment: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+    date: `2019-05-08T14:13:56.569Z`
+  },
+  {
+    id: 1,
+    user: {
+      id: 4,
+      name: `Kate Muir`
+    },
+    rating: 8.9,
+    comment: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+    date: `2019-05-08T14:13:56.569Z`
+  },
+];
+
+it(`Render Tabs`, () => {
   const tree = renderer
-    .create(<MovieCard
-      movieCard={movieCard}
-    />, {
-      createNodeMock: () => {
-        return {};
-      }
-    })
+    .create(<Tabs
+      moviePage={moviePage}
+      reviews={reviews}
+    />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

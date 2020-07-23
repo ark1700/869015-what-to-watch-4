@@ -43,7 +43,7 @@ const moviesList = [
   }
 ];
 
-it(`Render Main`, () => {
+it(`Render Movie list`, () => {
   const tree = renderer
     .create(<MovieList
       moviesList={moviesList}

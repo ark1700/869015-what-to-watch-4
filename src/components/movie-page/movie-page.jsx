@@ -1,29 +1,22 @@
 import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
+import Tabs from "../tabs/tabs.jsx";
+import MovieList from "../movie-list/movie-list.jsx";
 import {movieCardPropTypes} from "../../prop-types/movie-card.prop-types.js";
+import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types.js";
+import {reviewsPropTypes} from "../../prop-types/reviews.prop-types.js";
 
 class MoviePage extends PureComponent {
   constructor(props) {
     super(props);
+
   }
 
-  render() {
-    const {name, posterImage, backgroundImage, backgroundColor, genre, released, isFavorite, rating, scoresCount, description, director, starring} = this.props.moviePage;
 
-    const getRatingLevel = (ratingNumbrer) => {
-      let level;
-      if (ratingNumbrer < 3) {
-        level = `Bad`;
-      } else if (ratingNumbrer >= 3 && ratingNumbrer < 5) {
-        level = `Normal`;
-      } else if (ratingNumbrer >= 5 && ratingNumbrer < 8) {
-        level = `Good`;
-      } else if (ratingNumbrer >= 8 && ratingNumbrer < 10) {
-        level = `Very good`;
-      } else {
-        level = `Awesome`;
-      }
-      return (level);
-    };
+  render() {
+    const {moviePage, reviews, similarFilms, setActiveCard} = this.props;
+    const {name, posterImage, backgroundImage, backgroundColor, genre, released, isFavorite} = moviePage;
+
     return (
       <div>
         <section className="movie-card movie-card--full">
@@ -90,35 +83,10 @@ class MoviePage extends PureComponent {
               </div>
 
               <div className="movie-card__desc">
-                <nav className="movie-nav movie-card__nav">
-                  <ul className="movie-nav__list">
-                    <li className="movie-nav__item movie-nav__item--active">
-                      <a href="#" className="movie-nav__link">Overview</a>
-                    </li>
-                    <li className="movie-nav__item">
-                      <a href="#" className="movie-nav__link">Details</a>
-                    </li>
-                    <li className="movie-nav__item">
-                      <a href="#" className="movie-nav__link">Reviews</a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <div className="movie-rating">
-                  <div className="movie-rating__score">{rating}</div>
-                  <p className="movie-rating__meta">
-                    <span className="movie-rating__level">{getRatingLevel(rating)}</span>
-                    <span className="movie-rating__count">{scoresCount} ratings</span>
-                  </p>
-                </div>
-
-                <div className="movie-card__text">
-                  <p>{description}</p>
-
-                  <p className="movie-card__director"><strong>Director: {director}</strong></p>
-
-                  <p className="movie-card__starring"><strong>Starring: {starring.join(`, `)} and other</strong></p>
-                </div>
+                <Tabs
+                  moviePage={moviePage}
+                  reviews={reviews}
+                />
               </div>
             </div>
           </div>
@@ -127,44 +95,10 @@ class MoviePage extends PureComponent {
         <div className="page-content">
           <section className="catalog catalog--like-this">
             <h2 className="catalog__title">More like this</h2>
-
-            <div className="catalog__movies-list">
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Fantastic Beasts: The Crimes of Grindelwald</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Bohemian Rhapsody</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Macbeth</a>
-                </h3>
-              </article>
-
-              <article className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/aviator.jpg" alt="Aviator" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">Aviator</a>
-                </h3>
-              </article>
-            </div>
+            <MovieList
+              moviesList={similarFilms}
+              setActiveCard={setActiveCard}
+            />
           </section>
 
           <footer className="page-footer">
@@ -188,6 +122,9 @@ class MoviePage extends PureComponent {
 
 MoviePage.propTypes = {
   moviePage: movieCardPropTypes,
+  similarFilms: moviesListPropTypes,
+  reviews: reviewsPropTypes,
+  setActiveCard: PropTypes.func,
 };
 
 export default MoviePage;
