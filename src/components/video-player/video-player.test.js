@@ -24,7 +24,7 @@ const film = {
 
 it(`VideoPlayer component should render correct`, () => {
   const tree = renderer.create(<VideoPlayer
-    src={film.previewSrc}
+    src={film.previewVideoLink}
     isPlaying={false}
     previewImage={film.previewImage}
     muted={true}

@@ -22,7 +22,7 @@ const movieCard = {
   isFavorite: false
 };
 
-it(`Render Main`, () => {
+it(`Render Movie card`, () => {
   const tree = renderer
     .create(<MovieCard
       movieCard={movieCard}

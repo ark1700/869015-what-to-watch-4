@@ -1,8 +1,10 @@
 import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
 import Tabs from "../tabs/tabs.jsx";
 import MovieList from "../movie-list/movie-list.jsx";
 import {movieCardPropTypes} from "../../prop-types/movie-card.prop-types.js";
 import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types.js";
+import {reviewsPropTypes} from "../../prop-types/reviews.prop-types.js";
 
 class MoviePage extends PureComponent {
   constructor(props) {
@@ -13,7 +15,7 @@ class MoviePage extends PureComponent {
 
   render() {
     const {moviePage, reviews, similarFilms, setActiveCard} = this.props;
-    const {name, posterImage, backgroundImage, backgroundColor, genre, released, isFavorite, rating, scoresCount, description, director, starring} = moviePage;
+    const {name, posterImage, backgroundImage, backgroundColor, genre, released, isFavorite} = moviePage;
 
     return (
       <div>
@@ -121,6 +123,8 @@ class MoviePage extends PureComponent {
 MoviePage.propTypes = {
   moviePage: movieCardPropTypes,
   similarFilms: moviesListPropTypes,
+  reviews: reviewsPropTypes,
+  setActiveCard: PropTypes.func,
 };
 
 export default MoviePage;

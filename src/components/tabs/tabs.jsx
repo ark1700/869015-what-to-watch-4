@@ -62,7 +62,7 @@ class Tabs extends PureComponent {
   _tabsContent() {
     const {moviePage, reviews} = this.props;
     const tab = this.state.tab;
-    const {name, posterImage, backgroundImage, backgroundColor, genre, released, isFavorite, rating, scoresCount, description, director, starring, runTime} = moviePage;
+    const {genre, released, rating, scoresCount, description, director, starring, runTime} = moviePage;
 
     switch (tab) {
       case TABS.DETAILS:
