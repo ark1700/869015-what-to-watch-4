@@ -4,6 +4,9 @@ import Main from "../main/main.jsx";
 import MoviePage from "../movie-page/movie-page.jsx";
 import PropTypes from "prop-types";
 import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types.js";
+import reviews from "../../mocks/reviews.js";
+import films from "../../mocks/films.js";
+import {SIMILAR_FILMS_COUNT} from "../../utils.js";
 
 const movieCardHead = {
   title: `The Grand Budapest Hotel`,
@@ -53,7 +56,12 @@ class App extends PureComponent {
             />
           </Route>
           <Route exact path="/movie-page">
-            <MoviePage moviePage={this.state.activeCard} />
+            <MoviePage
+              moviePage={this.state.activeCard}
+              reviews={reviews}
+              similarFilms={films.slice(-SIMILAR_FILMS_COUNT)}
+              setActiveCard={() => {}}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
