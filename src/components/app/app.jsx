@@ -7,6 +7,7 @@ import {moviesListPropTypes} from "../../prop-types/movies-list.prop-types.js";
 import reviews from "../../mocks/reviews.js";
 import films from "../../mocks/films.js";
 import {SIMILAR_FILMS_COUNT} from "../../utils.js";
+import {connect} from "react-redux";
 
 const movieCardHead = {
   title: `The Grand Budapest Hotel`,
@@ -78,4 +79,11 @@ App.propTypes = {
   setActiveCard: PropTypes.func,
 };
 
-export default App;
+
+const mapStateToProps = (state) => ({
+  moviesList: state.movieCards,
+});
+
+export {App};
+export default connect(mapStateToProps)(App);
+
